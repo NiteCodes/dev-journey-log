@@ -9,4 +9,5 @@ git remote add origin https://github.com/nite-cd/test_repo.git
 git push --force-with-lease origin main (force write)  
 git push -u origin main  
 
-
+retrive data from repository
+git pull origin main
