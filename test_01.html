@@ -4,8 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        .container {
+            display: grid;
+            grid-template-areas:"H H H"
+                    "SB C C"
+                    "SB C C"
+                    "F F F";
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-rows: 1fr 1fr 1fr 1fr; /* flexible row heights */
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 100vh;
+            gap: 0.5rem;
+            /* padding: 1rem; */
+
+        }
+        .header {
+            grid-area: H;
+            display: grid;
+            background-color: chartreuse;
+            align-items: center;
+            justify-items: center;
+
+        }
+        .sideBar {
+            grid-area: SB;
+            background-color: aqua;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+
+
+        }
+        .content {
+            grid-area: C;
+            background-color: brown;
+            display: grid;
+            /* align-items: center; */
+            /* padding: 2rem; */
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-items: center;
+
+
+
+        }
+        .footer {
+            grid-area: F;
+            display: grid;
+            background-color: darkgoldenrod;
+            align-items: center;
+            justify-items: center;
+        }
+        /* .subClass {
+            background-color: aliceblue;
+        } */
+        /* .inner-box {
+            width: 150px;
+            height: 100px;
+            background-color: white;
+            border: 3px solid black;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            font-weight: bold;
+        } */
+        .subchild{
+            width: 75%;
+            height: 75%;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .header-msgbox{
+            width: 75%;
+            height: 75%;
+            background-color: rgb(255, 255, 255);
+        }
+        .sb-msgBox{
+            width: 75%;
+            height: 75%;
+            background-color: rgb(255, 255, 255);
+        }
+        .footer-msgbox{
+            width: 75%;
+            height: 75%;
+            background-color: rgb(255, 255, 255);
+        }
+
+    </style>
 </head>
 <body>
+
+    <div class = "container">
+        <div class="child header">
+            <div class="header-msgbox">header-msgBox</div>
+        </div>
+        <div class="child sideBar">
+            <div class="sb-msgBox">msgBox</div>
+        </div>
+        <div class="child content">
+            <div class="subchild">msgBox-1</div>
+            <div class="subchild">msgBox-2</div>
+            <div class="subchild">msgBox-3</div>
+            <div class="subchild">msgBox-4</div>
+        </div>
+        <div class="child footer">
+            <div class="footer-msgbox">footer-msgBox</div>
+        </div>
+    </div>
+
     
 </body>
 </html>
