@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
 
         .container {
@@ -26,6 +27,7 @@
             background-color: chartreuse;
             align-items: center;
             justify-items: center;
+            text-align: center;
 
         }
         .sideBar {
@@ -34,6 +36,7 @@
             display: grid;
             align-items: center;
             justify-items: center;
+            text-align: center;
 
 
         }
@@ -41,11 +44,12 @@
             grid-area: C;
             background-color: brown;
             display: grid;
-            /* align-items: center; */
+            align-items: center;
             /* padding: 2rem; */
             grid-template-columns: repeat(2,1fr);
             align-items: center;
             justify-items: center;
+            text-align: center;
 
 
 
@@ -56,6 +60,7 @@
             background-color: darkgoldenrod;
             align-items: center;
             justify-items: center;
+            text-align: center;
         }
         /* .subClass {
             background-color: aliceblue;
@@ -71,26 +76,31 @@
             font-weight: bold;
         } */
         .subchild{
+            white-space: pre-line;
             width: 75%;
             height: 75%;
             background-color: rgb(255, 255, 255);
         }
         
         .header-msgbox{
+            white-space: pre-line;
             width: 75%;
             height: 75%;
             background-color: rgb(255, 255, 255);
         }
         .sb-msgBox{
+            white-space: pre-line;
             width: 75%;
             height: 75%;
             background-color: rgb(255, 255, 255);
         }
         .footer-msgbox{
+            white-space: pre-line;
             width: 75%;
             height: 75%;
             background-color: rgb(255, 255, 255);
         }
+        
 
     </style>
 </head>
@@ -98,19 +108,21 @@
 
     <div class = "container">
         <div class="child header">
-            <div class="header-msgbox">header-msgBox</div>
+            <div class="header-msgbox">Introduction</div>
         </div>
         <div class="child sideBar">
             <div class="sb-msgBox">msgBox</div>
         </div>
         <div class="child content">
-            <div class="subchild">msgBox-1</div>
-            <div class="subchild">msgBox-2</div>
-            <div class="subchild">msgBox-3</div>
-            <div class="subchild">msgBox-4</div>
+            <div class="subchild">Profession : Developer</div>
+            <div class="subchild">Hobbies</div>
+            <div class="subchild">Interests</div>
+            <div class="subchild">Miscellaneous
+                This is my first misc activity
+            </div>
         </div>
         <div class="child footer">
-            <div class="footer-msgbox">footer-msgBox</div>
+            <div class="footer-msgbox">Disclaimer</div>
         </div>
     </div>
 
