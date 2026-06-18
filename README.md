@@ -16,3 +16,7 @@ added new file : style.css to style test_01.html file.
 added new file : flex.html  
 added new file : style_flex.css  
 modified file : test_01.html  
+added several new files :classroom.png,careers.html,login.html,contact.html  
+designed a basic UI design.  
+task : need to complete flexbox froggy  
+task : need to design contact, login and careers page  
