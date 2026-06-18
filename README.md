@@ -11,3 +11,6 @@ git push -u origin main
 
 retrive data from repository  
 git pull origin main  
+Added a new file : test_01.html to test what i have leanred so far.  
+added new file : style.css to style test_01.html file.  
+

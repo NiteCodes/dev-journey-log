@@ -4,128 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <style>
-
-        .container {
-            display: grid;
-            grid-template-areas:"H H H"
-                    "SB C C"
-                    "SB C C"
-                    "F F F";
-            /* grid-template-columns: 1fr 1fr 1fr; */
-            grid-template-rows: 1fr 1fr 1fr 1fr; /* flexible row heights */
-            grid-template-columns: 1fr 1fr 1fr;
-            height: 100vh;
-            gap: 0.5rem;
-            /* padding: 1rem; */
-
-        }
-        .header {
-            grid-area: H;
-            display: grid;
-            background-color: chartreuse;
-            align-items: center;
-            justify-items: center;
-            text-align: center;
-
-        }
-        .sideBar {
-            grid-area: SB;
-            background-color: aqua;
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            text-align: center;
-
-
-        }
-        .content {
-            grid-area: C;
-            background-color: brown;
-            display: grid;
-            align-items: center;
-            /* padding: 2rem; */
-            grid-template-columns: repeat(2,1fr);
-            align-items: center;
-            justify-items: center;
-            text-align: center;
-
-
-
-        }
-        .footer {
-            grid-area: F;
-            display: grid;
-            background-color: darkgoldenrod;
-            align-items: center;
-            justify-items: center;
-            text-align: center;
-        }
-        /* .subClass {
-            background-color: aliceblue;
-        } */
-        /* .inner-box {
-            width: 150px;
-            height: 100px;
-            background-color: white;
-            border: 3px solid black;
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            font-weight: bold;
-        } */
-        .subchild{
-            white-space: pre-line;
-            width: 75%;
-            height: 75%;
-            background-color: rgb(255, 255, 255);
-        }
-        
-        .header-msgbox{
-            white-space: pre-line;
-            width: 75%;
-            height: 75%;
-            background-color: rgb(255, 255, 255);
-        }
-        .sb-msgBox{
-            white-space: pre-line;
-            width: 75%;
-            height: 75%;
-            background-color: rgb(255, 255, 255);
-        }
-        .footer-msgbox{
-            white-space: pre-line;
-            width: 75%;
-            height: 75%;
-            background-color: rgb(255, 255, 255);
-        }
-        
-
     </style>
 </head>
 <body>
-
     <div class = "container">
         <div class="child header">
-            <div class="header-msgbox">Introduction</div>
+            <div class="header-msgbox">Introduction:
+                
+                Hi, I am Nitesh.
+            </div>
         </div>
         <div class="child sideBar">
-            <div class="sb-msgBox">msgBox</div>
+            <div class="sb-msgBox">msgBox:
+
+                I might add a photo here later.
+            </div>
         </div>
         <div class="child content">
-            <div class="subchild">Profession : Developer</div>
-            <div class="subchild">Hobbies</div>
-            <div class="subchild">Interests</div>
-            <div class="subchild">Miscellaneous
-                This is my first misc activity
+            <div class="subchild">Profession : Developer
+                
+                Full Stack Developement
+            </div>
+            <div class="subchild">Hobbies:
+                
+                I love to play games!
+            </div>
+            <div class="subchild">Interests:
+
+                I love to code and build interactive projects.
+                
+            </div>
+            <div class="subchild">Miscellaneous:
+                
+                I grew up in Prayagraj.
+
             </div>
         </div>
         <div class="child footer">
-            <div class="footer-msgbox">Disclaimer</div>
+            <div class="footer-msgbox">Disclaimer : 
+                Following Project is made by Nitesh for learning purpose.
+                This project is still under development.
+                Thanks for visiting.
+            </div>
         </div>
     </div>
-
-    
 </body>
 </html>
