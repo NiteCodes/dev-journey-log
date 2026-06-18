@@ -1,0 +1,94 @@
+.container {
+            display: grid;
+            grid-template-areas:"H H H"
+                    "SB C C"
+                    "SB C C"
+                    "F F F";
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-rows: 1fr 1fr 1fr 1fr; /* flexible row heights */
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 100vh;
+            gap: 0.5rem;
+            /* padding: 1rem; */
+
+        }
+        .header {
+            grid-area: H;
+            display: grid;
+            background-color: chartreuse;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+
+        }
+        .sideBar {
+            grid-area: SB;
+            background-color: aqua;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+
+
+        }
+        .content {
+            grid-area: C;
+            background-color: brown;
+            display: grid;
+            align-items: center;
+            /* padding: 2rem; */
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+
+
+
+        }
+        .footer {
+            grid-area: F;
+            display: grid;
+            background-color: darkgoldenrod;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+        }
+        /* .subClass {
+            background-color: aliceblue;
+        } */
+        /* .inner-box {
+            width: 150px;
+            height: 100px;
+            background-color: white;
+            border: 3px solid black;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            font-weight: bold;
+        } */
+        .subchild{
+            white-space: pre-line;
+            width: 75%;
+            height: 75%;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .header-msgbox{
+            white-space: pre-line;
+            width: 75%;
+            height: 75%;
+            background-color: rgb(255, 255, 255);
+        }
+        .sb-msgBox{
+            white-space: pre-line;
+            width: 75%;
+            height: 75%;
+            background-color: rgb(255, 255, 255);
+        }
+        .footer-msgbox{
+            white-space: pre-line;
+            width: 75%;
+            height: 75%;
+            background-color: rgb(255, 255, 255);
+        }
+        
