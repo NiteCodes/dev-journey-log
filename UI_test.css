@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+
+}
+
+.logo{
+    color: red;
+    padding-left: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding-right: 1rem;
+}
+
+Body {
+    background-image: url('classroom.png');
+    background-size: cover;
+    /* height: 100vh;*/
+    overflow: hidden;              
+
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+}
+
+.text{
+    font-size: 5rem;
+    font-weight: bold;
+    color: black;
+    backdrop-filter: blur(3px);
+    
+}
+.button{
+    padding: 0.5rem;
+    border-radius: 30px;
+    border: none;
+}
+
+.child{
+    color: white;
+    text-decoration: none;
+}
+
+.child:hover{
+    cursor: pointer;
+    color: aquamarine;
+}
