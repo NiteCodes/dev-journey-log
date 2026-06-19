@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+
+}
+
+.logo{
+    color: red;
+    padding-left: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding-right: 1rem;
+}
+
+Body {
+    background-image: url('contact.png');
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;              
+
+}
+
+.child{
+    color: white;
+    text-decoration: none;
+}
+
+.child:hover{
+    cursor: pointer;
+    color: aquamarine;
+}
+
+
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: aliceblue; */
+    align-items: center;
+    justify-content:center;
+    gap: 3rem;
+}
+
+.image{
+    display: flex;
+    height: 30rem;
+    width: 20rem;
+    background-image: url('images.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    background-color: white;
+    height: 30rem;
+    width: 20rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.name,
+.address,
+.number{
+    display: flex;
+    background-color: aqua;
+    height: 7rem;
+    width: 17rem;
+    align-items: center;
+    justify-content:start;
+}
