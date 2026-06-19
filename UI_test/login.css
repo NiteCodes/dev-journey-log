@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+
+}
+
+.logo{
+    color: red;
+    padding-left: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding-right: 1rem;
+}
+
+Body {
+    background-image: url('contact.png');
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;              
+
+}
+
+.child{
+    color: white;
+    text-decoration: none;
+}
+
+.child:hover{
+    cursor: pointer;
+    color: aquamarine;
+}
+
+
