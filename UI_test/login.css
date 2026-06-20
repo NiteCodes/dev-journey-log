@@ -41,4 +41,31 @@ Body {
     color: aquamarine;
 }
 
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
 
+
+.title {
+    display: flex;
+    padding: 2rem;
+    height: 10rem;
+    width: 95%;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    /* background-color: white; */
+    height: 12rem;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
