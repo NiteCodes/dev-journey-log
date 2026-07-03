@@ -24,3 +24,4 @@ continuation: learning
 added new fine : zip.html  
 testing if it works: git add README.md > git commit -m "Update README.md"  
 works with : git add README.md > commit > push  
+works with :  first ctrl+s to save text file, then add > commit > push  
