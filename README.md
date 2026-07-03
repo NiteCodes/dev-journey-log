@@ -20,3 +20,5 @@ added several new files :classroom.png,careers.html,login.html,contact.html
 designed a basic UI design.  
 task : need to complete flexbox froggy  
 task : need to design contact, login and careers page  
+continuation: learning
+added new fine : zip.html
