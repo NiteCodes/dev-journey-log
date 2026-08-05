@@ -573,7 +573,7 @@
 // //     a = 100;
 // // }
 
-console.log("11/07/2016~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+console.log("11/07/2026~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 // // func();
 // // function func () {
@@ -611,6 +611,7 @@ console.log("11/07/2016~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 
 // // // Higer-order function: first def: a function 
+
 // // // takes another funtion as an argument
 
 // // const sayHi = (name, callback)=>{
@@ -633,12 +634,12 @@ console.log("11/07/2016~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 // or
 
 
-const outerFunc = (a) => {
-     return function (b){
-        return a+b
-    }
-}
-console.log(outerFunc(1)(2))
+// const outerFunc = (a) => {
+//      return function (b){
+//         return a+b
+//     }
+// }
+// console.log(outerFunc(1)(2))
 
 
 
@@ -647,6 +648,7 @@ console.log(outerFunc(1)(2))
 
 
 // // // call back fucntion
+
 // // const greet = (callback) => console.log(`Hi ${callback}`);
 // // callback = 'Nitesh';
 // // sayHi (greet,callback);
@@ -654,6 +656,10 @@ console.log(outerFunc(1)(2))
 
 // // // here name is a funtion that is stored as an argumet inside sayHi fuction
 // // // sayHi is a variable that stores a fuction 
+
+
+console.log("10/08/2026~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
 
 
 
