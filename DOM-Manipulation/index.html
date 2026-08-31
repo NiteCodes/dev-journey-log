@@ -16,10 +16,13 @@
      <h3 class="child"></h3>
      <h3 class="child"></h3>
      <h3 class="child"></h3>
-     <button onclick="console.log('Button clicked')">Click Me!</button>
+     <button style="background-color: cyan;" onclick="console.log('Button clicked')">Click Me!</button>
      <br>
      <br>
      <button onclick="showMyName()">Click Me!</button>
+     <br>
+     <br>
+     <button id="btn">Now You Click Me!</button>
 
     <div class="child"></div>
     <div class="child"></div>
@@ -38,9 +41,16 @@
         console.log(document.getElementsByClassName("class"))
         console.log(document.getElementsByTagName("div"))
 
+
+// Event Listener by using function
         const showMyName = () => {
-            console.log("My name is Wick, John Wick");
+            console.log("My name is Wick!, John Wick!!");
         }
+// Event Listener by using addEventListener
+        document.getElementById("btn").addEventListener("click", () => {
+            console.log("Now You Click Me!");
+        })
+
      </script>
 </body>
 
