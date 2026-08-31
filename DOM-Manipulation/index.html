@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- div#parent -->
+
+<div id="parent">
+    
+    <!-- div.class*5 -->
+     <!-- h3.div*5 -->
+
+     <h3 class="child"></h3>
+     <h3 class="child"></h3>
+     <h3 class="child"></h3>
+     <button onclick="console.log('Button clicked')">Click Me!</button>
+     <br>
+     <br>
+     <button onclick="showMyName()">Click Me!</button>
+
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+
+</div>
+
+<body>
+     <script>
+        console.log("Hello, World!");
+        console.log(document);
+        console.log("This is DOM manipulation"); 
+        console.log(document.getElementById("parent"))
+        console.log(document.getElementsByClassName("class"))
+        console.log(document.getElementsByTagName("div"))
+
+        const showMyName = () => {
+            console.log("My name is Wick, John Wick");
+        }
+     </script>
+</body>
+
+</html>
