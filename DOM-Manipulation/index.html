@@ -6,7 +6,7 @@
     <title>Document</title>
     
 
-    <style>
+    <!-- <style>
 
         #parent {
             width: 50vh;
@@ -32,7 +32,7 @@
             background-color: lightgray;
         }
 
-    </style>
+    </style> -->
 
 
 
@@ -42,57 +42,68 @@
 
 
 
-<div id="parent">
+<!-- <div id="parent"> -->
     <!-- div#child -->
-    <div id="child">
+    <!-- <div id="child"> -->
         <!-- div#subchild -->
-        <div id="subchild">
+        <!-- <div id="subchild"> -->
 
-        </div>
-    </div>
-</div>
+        <!-- </div>
+    </div> -->
+<!-- </div> -->
 
     <!-- div.class*5 -->
      <!-- h3.div*5 -->
+     <!-- <button style="background-color: cyan;" onclick="console.log('Button clicked')">Click Me!</button> -->
+     <br>
+     <br>
+     <!-- <button onclick="showMyName()">My Name!</button> -->
+     <br>
+     <br>
+     <!-- <button id="btn">Now You Click Me!</button> -->
+     <!-- <br>
+     <br>
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+    <div class="child1">1</div>
+    <div class="child1">2</div>
+    <div class="child1">3</div>
+    <div class="child1">4</div>
+    <div class="child1">5</div>
+    <div id="child">*</div>
 
-     <h3 class="child"></h3>
-     <h3 class="child"></h3>
-     <h3 class="child"></h3>
-     <button style="background-color: cyan;" onclick="console.log('Button clicked')">Click Me!</button>
-     <br>
-     <br>
-     <button onclick="showMyName()">My Name!</button>
-     <br>
-     <br>
-     <button id="btn">Now You Click Me!</button>
+</div> -->
 
-    <div class="child"></div>
-    <div class="child"></div>
-    <div class="child"></div>
-    <div class="child"></div>
-    <div class="child"></div>
+<div id="main">
+
+    <h1 id="heading">This is a heading</h1>
+    <h2 id="parent">This is a paragraph</h2>
 
 </div>
 
+
 <body>
      <script>
-        console.log("Hello, World!");
-        console.log(document);
-        console.log("This is DOM manipulation"); 
-        console.log(document.getElementById("parent"))
-        console.log(document.getElementsByClassName("class"))
-        console.log(document.getElementsByTagName("div"))
+//         console.log("Hello, World!");
+//         console.log(document);
+//         console.log("This is DOM manipulation"); 
+//         console.log(document.getElementById("parent"))
+//         console.log(document.getElementsByClassName("class"))
+//         console.log(document.getElementsByTagName("div"))
 
 
-// Event Listener by using function
-        const showMyName = () => {
-            console.log("My name is Wick!, John Wick!!");
-        }
-// Event Listener by using addEventListener
+// // Event Listener by using function
+//         const showMyName = () => {
+//             console.log("My name is Wick!, John Wick!!");
+//         }
+// // Event Listener by using addEventListener
 
-        document.getElementById("btn").addEventListener("click", () => {
-            console.log("Now You Click Me!");
-        })
+//         document.getElementById("btn").addEventListener("click", () => {
+//             console.log("Now You Click Me!");
+//         })
 
 // calling the event listener on parent, 
 // child and subchild to see the event bubbling and capturing
@@ -149,42 +160,94 @@
 
 // but we can set it to capturing phase by passing true as the third argument in addEventListener method.
 
-        document.getElementById('parent').addEventListener('click', (event) => {
-            console.log('Parent clicked')
-            // event.stopPropagation()
-            console.log("event: ", event);
-        }, true);
-        document.getElementById('child').addEventListener('click', (event) => {
-            console.log('Child clicked')
-            // event.stopPropagation()
-            console.log("event: ", event);
-        },true);
-        document.getElementById('subchild').addEventListener('click', (event) => {
-            console.log('Subchild clicked'),
-            // event.stopPropagation()
-            console.log("event: ", event);
-        }, true);
-// now order is : parent -> child -> subchild, top to bottom, 
-// because we set the event listener to capturing phase by passing true
-// as the third argument in addEventListener method.
+//         document.getElementById('parent').addEventListener('click', (event) => {
+//             console.log('Parent clicked')
+//             // event.stopPropagation()
+//             console.log("event: ", event);
+//         }, true);
+//         document.getElementById('child').addEventListener('click', (event) => {
+//             console.log('Child clicked')
+//             // event.stopPropagation()
+//             console.log("event: ", event);
+//         },true);
+//         document.getElementById('subchild').addEventListener('click', (event) => {
+//             console.log('Subchild clicked'),
+//             // event.stopPropagation()
+//             console.log("event: ", event);
+//         }, true);
+// // now order is : parent -> child -> subchild, top to bottom, 
+// // because we set the event listener to capturing phase by passing true
+// // as the third argument in addEventListener method.
 
-// here event is a POINTER EVENT or SYNTHETIC EVENT that is an object that is passed to the event listener function. 
-// It contains information about the event that occurred, 
-// such as the type of event, the target element, and other properties. 
-// In this case, we are logging the event object to the console to see its properties.
-
-
-        console.log("parent: ",document.querySelector('#parent'));
-// # is used to select the element with the specified ID. 
-// In this case, it selects the element with the ID "parent".
+// // here event is a POINTER EVENT or SYNTHETIC EVENT that is an object that is passed to the event listener function. 
+// // It contains information about the event that occurred, 
+// // such as the type of event, the target element, and other properties. 
+// // In this case, we are logging the event object to the console to see its properties.
 
 
-        console.log("child: ",document.querySelector('.child'));
-// here . is used to select the element with the specified class
-// in this case, it selects the element with the class "child"
+//         console.log("parent: ",document.querySelector('#parent'));
+// // # is used to select the element with the specified ID. 
+// // In this case, it selects the element with the ID "parent".
 
-        console.log("subchild: ",document.querySelectorAll('.subchild'));
-// In this case, it selects all elements with the class "subchild" 
+
+//         console.log("child: ",document.querySelector('.child'));
+// // here . is used to select the element with the specified class
+// // in this case, it selects the element with the class "child"
+
+//         console.log("subchild: ",document.querySelectorAll('.subchild'));
+// // In this case, it selects all elements with the class "subchild" 
+
+
+        // const parent = document.getElementById('parent');
+        // console.log(parent);
+
+        // const child = document.getElementsByClassName('child');
+        // console.log(child);
+
+        // parent.addEventListener('click', (event) => console.log(event.target.innerText));
+// here target is used to get the element that was clicked.
+// here innerText is used to get the text content of the element that was clicked.
+
+        // parent.addEventListener('click', (event) => console.log(event.target.classList));
+// here classList is used to get the list of classes of the element that was clicked.
+
+        // parent.addEventListener('click', (event) => console.log(event.target.classList.contains('child')));
+// here contains is used to check if the element that was clicked has the class "child" or not.
+
+        // parent.addEventListener('click', (event) => {
+        //     if (event.target.classList.contains('child') || event.target.classList.contains('child1')) 
+        //         console.log(event.target.innerText);
+        //     else console.log("out of the class: child");
+        //     });
+
+        const main = document.getElementById('main');
+        main.style.backgroundColor = 'yellow';
+
+        main.onclick = () => {
+            main.style.backgroundColor = 'black';
+            main.style.color = 'red';
+            main.style.textAlign = 'right';
+        }
+
+
+        // main.onmouseover = () => {
+        //     main.style.backgroundColor ='red';
+        //     main.style.textAlign = 'center';
+
+        // }
+
+        // main.onmouseout = () => {
+        //     main.style.backgroundColor = 'lightblue';
+        //     main.style.textAlign = 'left';
+        // }
+
+        
+
+        console.log(main.innerHTML);
+
+
+
+
      </script>
 </body>
 </html>
