@@ -221,29 +221,40 @@
         //     });
 
         const main = document.getElementById('main');
+        const heading = document.getElementById('heading');
+
+        console.log("innerHTML: ",main.innerHTML);
+        console.log("innerText: ",main.innerText);
+        console.log("textContent: ",main.textContent);
+        console.log("outerHTML: ",main.outerHTML);
+        console.log("outerText: ",main.outerText);
+
         main.style.backgroundColor = 'yellow';
 
         main.onclick = () => {
-            main.style.backgroundColor = 'black';
-            main.style.color = 'red';
+            main.style.backgroundColor = 'green';
+            main.style.color = 'white';
             main.style.textAlign = 'right';
         }
 
 
-        // main.onmouseover = () => {
-        //     main.style.backgroundColor ='red';
-        //     main.style.textAlign = 'center';
+        main.onmouseover = () => {
+            main.style.backgroundColor ='red';
+            main.style.textAlign = 'center';
 
-        // }
+        }
 
-        // main.onmouseout = () => {
-        //     main.style.backgroundColor = 'lightblue';
-        //     main.style.textAlign = 'left';
-        // }
+        main.onmouseout = () => {
+            main.style.backgroundColor = 'lightblue';
+            main.style.textAlign = 'left';
+        }
+
+        heading.innerText = "This is a new heading";
+        heading.style.color = 'blue';
 
         
 
-        console.log(main.innerHTML);
+        
 
 
 
