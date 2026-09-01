@@ -4,12 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+
+    <style>
+
+        #parent {
+            width: 50vh;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(140, 198, 218);
+        }
+
+        #child {
+            width: 75%;
+            height: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(126, 125, 125);
+        }
+
+        #subchild {
+            width: 50%;
+            height: 50%;
+            background-color: lightgray;
+        }
+
+    </style>
+
+
+
 </head>
 
 <!-- div#parent -->
 
+
+
 <div id="parent">
-    
+    <!-- div#child -->
+    <div id="child">
+        <!-- div#subchild -->
+        <div id="subchild">
+
+        </div>
+    </div>
+</div>
+
     <!-- div.class*5 -->
      <!-- h3.div*5 -->
 
@@ -19,7 +61,7 @@
      <button style="background-color: cyan;" onclick="console.log('Button clicked')">Click Me!</button>
      <br>
      <br>
-     <button onclick="showMyName()">Click Me!</button>
+     <button onclick="showMyName()">My Name!</button>
      <br>
      <br>
      <button id="btn">Now You Click Me!</button>
@@ -47,11 +89,102 @@
             console.log("My name is Wick!, John Wick!!");
         }
 // Event Listener by using addEventListener
+
         document.getElementById("btn").addEventListener("click", () => {
             console.log("Now You Click Me!");
         })
 
+// calling the event listener on parent, 
+// child and subchild to see the event bubbling and capturing
+
+        // document.getElementById('parent').addEventListener('click', () => {
+        //     console.log('Parent clicked')
+        // });
+        // document.getElementById('child').addEventListener('click', () => {
+        //     console.log('Child clicked')
+        // });
+        // document.getElementById('subchild').addEventListener('click', () => {
+        //     console.log('Subchild clicked')
+        // });
+
+// here on clicking the subchild, child and parent will be clicked because of event bubbling.
+// and if we want to stop the event bubbling, we can use stopPropagation() method.
+
+        // document.getElementById('parent').addEventListener('click', () => {
+        //     console.log('Parent clicked').stopPropagation()
+        // });
+        // document.getElementById('child').addEventListener('click', () => {
+        //     console.log('Child clicked').stopPropagation()
+        // });
+        // document.getElementById('subchild').addEventListener('click', () => {
+        //     console.log('Subchild clicked').stopPropagation()
+        // });
+// or
+        // document.getElementById('parent').addEventListener('click', (event) => {
+        //     console.log('Parent clicked')
+        //     event;
+        //     console.log("event: ", event);
+        // });
+// on parent click, child and subchild will not be clicked because of event bubbling.
+// so .stopPropagation method is not necessery to used to stop the event bubbling.
+
+
+        // document.getElementById('child').addEventListener('click', (event) => {
+        //     console.log('Child clicked')
+        //     event.stopPropagation()
+        //     console.log("event: ", event);
+
+        // });
+        // document.getElementById('subchild').addEventListener('click', (event) => {
+        //     console.log('Subchild clicked')
+        //     event.stopPropagation()
+        //     console.log("event: ", event);
+        // });
+
+// .event.stopPropagation() has 3 properties: action, function, and capturing 
+//by default, the event listener is set to bubbling phase (false by default)
+
+//ORDER is: subchild -> child -> parent, bottom to top, because 
+// we set the event listener to bubbling phase by default.
+
+// but we can set it to capturing phase by passing true as the third argument in addEventListener method.
+
+        document.getElementById('parent').addEventListener('click', (event) => {
+            console.log('Parent clicked')
+            // event.stopPropagation()
+            console.log("event: ", event);
+        }, true);
+        document.getElementById('child').addEventListener('click', (event) => {
+            console.log('Child clicked')
+            // event.stopPropagation()
+            console.log("event: ", event);
+        },true);
+        document.getElementById('subchild').addEventListener('click', (event) => {
+            console.log('Subchild clicked'),
+            // event.stopPropagation()
+            console.log("event: ", event);
+        }, true);
+// now order is : parent -> child -> subchild, top to bottom, 
+// because we set the event listener to capturing phase by passing true
+// as the third argument in addEventListener method.
+
+// here event is a POINTER EVENT or SYNTHETIC EVENT that is an object that is passed to the event listener function. 
+// It contains information about the event that occurred, 
+// such as the type of event, the target element, and other properties. 
+// In this case, we are logging the event object to the console to see its properties.
+
+
+        console.log("parent: ",document.querySelector('#parent'));
+// # is used to select the element with the specified ID. 
+// In this case, it selects the element with the ID "parent".
+
+
+        console.log("child: ",document.querySelector('.child'));
+// here . is used to select the element with the specified class
+// in this case, it selects the element with the class "child"
+
+        console.log("subchild: ",document.querySelectorAll('.subchild'));
+// In this case, it selects all elements with the class "subchild" 
      </script>
 </body>
-
 </html>
