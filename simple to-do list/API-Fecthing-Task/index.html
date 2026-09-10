@@ -1,98 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <input id="input" type "text" placeholder="Enter your task of the day">
-    <button id="addTask">add task</button>
-    <button id="deleteAll">delete all</button>
-    <div id="container"></div> -->
-
-
-//data-fetching
-
-<!-- <script src="script.js"></script> -->
-
-<!-- <script> -->
-
-// to-do list //
-const addTask = document.getElementById('addTask')
-const container = document.getElementById('container')
-
-
-
-addTask.addEventListener('click', () => {
-const input = document.getElementById('input')
-
-if (!input.value.trim()) {
-return
-}
-
-// if (input){return}
-// this wont work because document.getElementById('input')
-// will always return the input element, thus if inpur return will
-// always stop function immediately
-
-const list = document.createElement('li')
-const task = document.createElement('p')
-const dlt = document.createElement('button')
-task.innerText = input.value
-task.style.backgroundColor = 'orange'
-dlt.innerText = "Delete"
-dlt.style.backgroundColor = 'white'
-list.style.backgroundColor = 'yellow'
-list.style.display = 'flex'
-list.style.justifyContent = 'space-between'
-list.style.width = '25%'
-list.appendChild(task)
-list.appendChild(dlt)
-
-container.appendChild(list)
-input.value = ''
-
-dlt.addEventListener('click', () => list.remove())
-
-
-})
-
-const deleteAll = document.getElementById('deleteAll')
-// deleteAll.addEventListener('click', () => container.remove())
-// This removes the entire container element itself from the DOM.
-deleteAll.addEventListener('click', () => container.innerHTML = '')
-//while (container.firstChild) {container.removeChild(container.firstChild)}
-//this method is considered safer and explicit
-
-// to-do list //
-
-<!-- // data fetching --->
-
-
-
-<!-- </script>
-
-
-</body>
-
-</html>  -->
-
-<!-- // API  -->>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
+    <script src="script.js"></script>
 
-    <div id="container"></div>
+    <!-- <div id="container"></div> -->
 
-        <script src="script.js"></script>
+    <div id="frame">frame
+
+        <div id="content">content
+            <div class="name">name</div>
+            <div class="email">email</div>
+            <div class="address">address</div>
+        </div>
+
+    </div>
 
 
 </body>
