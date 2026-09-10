@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "beggining of node and react",
   "license": "ISC",
-  "author": "",
+  "author": "Nitesh",
   "type": "module",
   "main": "index.js",
   "scripts": {
