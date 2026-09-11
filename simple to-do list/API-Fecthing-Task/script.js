@@ -58,7 +58,6 @@ fetchData().then( users=> {
 
 
 
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // const fetchData = async () => {
@@ -101,96 +100,47 @@ fetchData().then( users=> {
 //     console.log("Full User Object:", users[0]);
 // })
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-// // fetchData();
-
-// fetchData().then(users => {
-
-//     const frame = document.getElementById('frame');
-
-
-//     // if (!frame || !users || users.length < 2) return;
-
-//     const user = users[1];
-
-//     // Create container
-//     const container = document.createElement('div');
-//     container.className = 'container';
-
-//     // Create name element
-//     const nameDiv = document.createElement('div');
-//     nameDiv.className = 'names';
-//     nameDiv.textContent = user.name;
-
-//     // Create email element
-//     const emailDiv = document.createElement('div');
-//     emailDiv.className = 'email';
-//     emailDiv.textContent = user.email;
-
-//     // Create address element
-//     const addressDiv = document.createElement('div');
-//     addressDiv.className = 'address';
-//     addressDiv.textContent = `${user.address.street},
-//                                 ${user.address.city},
-//                                 ${user.address.zipcode}`;
-
-//     // Append child elements to container
-//     container.appendChild(nameDiv);
-//     container.appendChild(emailDiv);
-//     container.appendChild(addressDiv);
-
-//     // Clear frame and append container
-//     // frame.appendChild(container);
-//     frame.replaceChildren(container);
-// });
-
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// fetchData().then(users => {
-//     const frame = document.getElementById('frame');
-//     const template = document.getElementById('user-card-template');
-
-//     if (!frame || !template || !users) return;
-
-//     users.forEach(user => {
-//         // Clone the HTML template structure
-//         const clone = template.content.cloneNode(true);
-
-//         // Populate elements using querySelector
-//         clone.querySelector('.name').textContent = user.name;
-//         clone.querySelector('.email').textContent = user.email;
-//         clone.querySelector('.address').textContent = user.address.city;
-//         // Append to container
-//         frame.appendChild(clone);
-//     });
-// });
-
 
 // fetchData().then(users => {
 //     const frame = document.getElementById('frame');
 //     if (!frame || !users) return;
 
+//     // Clear static/stale content once before adding cards
+//     frame.innerHTML = '';
+
+//     // Loop through every user object in the array
 //     users.forEach(user => {
+//         // Step 1: Create card container
 //         const container = document.createElement('div');
 //         container.className = 'container';
 
-//         container.innerHTML = `
-//             <div class="name">${user.name}</div>
-//             <div class="email">${user.email}</div>
-//             <div class="address">${user.address.city}</div>
-//         `;
+//         // Step 2: Create name element
+//         const nameDiv = document.createElement('div');
+//         nameDiv.className = 'names';
+//         nameDiv.textContent = user.name;
 
+//         // Step 3: Create email element
+//         const emailDiv = document.createElement('div');
+//         emailDiv.className = 'email';
+//         emailDiv.textContent = user.email;
+
+//         // Step 4: Create address element
+//         const addressDiv = document.createElement('div');
+//         addressDiv.className = 'address';
+//         addressDiv.textContent = `${user.address.street}, ${user.address.city}, ${user.address.zipcode}`;
+
+//         // Step 5: Assemble card
+//         container.appendChild(nameDiv);
+//         container.appendChild(emailDiv);
+//         container.appendChild(addressDiv);
+
+//         // Step 6: Append each user card to the main frame
 //         frame.appendChild(container);
 //     });
 // });
-
-
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
