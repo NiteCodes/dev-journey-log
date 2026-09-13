@@ -1,4 +1,4 @@
-// Step 1: Request Data from the Server and Convert the Raw Server Response
+// Step 1: Request data from the server and convert the raw JSON response
 
 const fetchData = async () => {
 
@@ -9,138 +9,104 @@ const fetchData = async () => {
     return data;
 }
 
-// Step 3: Locate the HTML Container and Target the Specific Record
+// Step 2: Locate the HTML container and process user records
 
-fetchData().then( users=> {
+fetchData().then(users => {
 
-    // const frame = document.createElement('Div');           mistake 1
+    // Target the main container element in the DOM
 
-    const frame = document.getElementById('frame')
+    const frame = document.getElementById('frame');
 
-    const user = users[9];
-    
-    console.log("Full User Object:",users);
+    // Clear any initial content or loading placeholders
 
+    frame.innerHTML = '';
 
+    // Step 3: Iterate through each user object in the array
 
-// Step 4: Create the Main Wrapper and Populate Individual Data Fields
+    users.forEach(user => {
 
+        // Step 4: Create the card wrapper and individual field elements
 
-    const container = document.createElement('div');
-    container.className = 'container';
+        const container = document.createElement('div');
+        container.className = 'container';
 
-    const nameDiv = document.createElement('div');
-    nameDiv.className = 'names';
-    nameDiv.textContent = user.name;
-    console.log(nameDiv);
+        const nameDiv = document.createElement('div');
+        nameDiv.className = 'names';
+        nameDiv.textContent = user.name;
+        console.log(nameDiv);
 
-    const  emailDiv= document.createElement('div');
-    emailDiv.className = 'email';
-    emailDiv.textContent = user.email;
-    console.log(emailDiv);
+        const emailDiv = document.createElement('div');
+        emailDiv.className = 'email';
+        emailDiv.textContent = user.email;
+        console.log(emailDiv);
 
+        const addressDiv = document.createElement('div');
+        addressDiv.className = 'address';
+        addressDiv.textContent = `${user.address.street}, ${user.address.city}, ${user.address.zipcode}`;
+        console.log(addressDiv);
 
-    const addressDiv = document.createElement('div');
-    addressDiv.className = 'address';
-    addressDiv.textContent = `${user.address.street}, ${user.address.city}, ${user.address.zipcode}`;
-    console.log(addressDiv);
+        // Step 5: Assemble the inner card structure
 
+        container.appendChild(nameDiv);
+        container.appendChild(emailDiv);
+        container.appendChild(addressDiv);
 
-// Step 5: Assemble the Inner Card Structure and Mount to the Visible Webpage
+        // Step 6: Mount the finished card to the visible web page
 
-    container.appendChild(nameDiv);
-    container.appendChild(emailDiv);
-    container.appendChild(addressDiv);
+        frame.appendChild(container);
 
-    frame.replaceChildren(container);
-}
-);
+    });
+
+});
 
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// Step 1: Request data from the server and convert the raw JSON response
 // const fetchData = async () => {
-//         console.log("fetching data...");
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const data = await response.json();
 
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        
-//         const data = await response.json();
-//         console.log("Fetched API Data:", data);
-    
-//         return data;
-
-// };
-
-// const fetchData = async () => {
-//     try {
-
-//         console.log("fetching data...");
-
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users');
-
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! Status: ${response.status}`);
-//         } 
-
-//         const data = await response.json();
-//         console.log("Fetched data from API:", data);
-    
-//         return data;
-
-//     } catch (err) {
-//         console.log("failed to fetch users data", err);
-//     }
-
-// };
-
-
-// fetchData().then(users =>{
-//     console.log('fetched data:',users);
-//     console.log("Full User Object:", users[0]);
-// })
-
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//     console.log('fetching data...', data);
+//     return data;
+// }
 
 // fetchData().then(users => {
+//                                                                                                                                                             // Step 2: Locate the target HTML container and initialize an in-memory DocumentFragment
 //     const frame = document.getElementById('frame');
-//     if (!frame || !users) return;
-
-//     // Clear static/stale content once before adding cards
-//     frame.innerHTML = '';
-
-//     // Loop through every user object in the array
+//     const fragment = document.createDocumentFragment();
+//                                                                                                                                                             // Step 3: Iterate over the array of users
 //     users.forEach(user => {
-//         // Step 1: Create card container
+//                                                                                                                                                             // Step 4: Create the card wrapper and populate child elements with user properties
 //         const container = document.createElement('div');
 //         container.className = 'container';
 
-//         // Step 2: Create name element
 //         const nameDiv = document.createElement('div');
 //         nameDiv.className = 'names';
 //         nameDiv.textContent = user.name;
+//         console.log(nameDiv);
 
-//         // Step 3: Create email element
 //         const emailDiv = document.createElement('div');
 //         emailDiv.className = 'email';
 //         emailDiv.textContent = user.email;
+//         console.log(emailDiv);
 
-//         // Step 4: Create address element
 //         const addressDiv = document.createElement('div');
 //         addressDiv.className = 'address';
 //         addressDiv.textContent = `${user.address.street}, ${user.address.city}, ${user.address.zipcode}`;
-
-//         // Step 5: Assemble card
+//         console.log(addressDiv);
+//                                                                                                                                                             // Step 5: Assemble the individual card structure
 //         container.appendChild(nameDiv);
 //         container.appendChild(emailDiv);
 //         container.appendChild(addressDiv);
-
-//         // Step 6: Append each user card to the main frame
-//         frame.appendChild(container);
+//                                                                                                                                                             // Append the assembled card into the off-screen memory fragment
+//         fragment.appendChild(container);
 //     });
+//                                                                                                                                                             // Step 6: Mount the entire fragment to the visible webpage in a single DOM update
+//     frame.replaceChildren(fragment);
 // });
 
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
