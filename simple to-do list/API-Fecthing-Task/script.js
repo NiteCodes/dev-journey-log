@@ -1,3 +1,41 @@
+const getInitials = (fullName) => {
+
+    let initials = ''
+
+    for (let i = 0; i < fullName.length; i++) {
+        const char = fullName[i];
+
+        if (char >= 'A' && char <= 'Z') {
+            initials += char;
+        }
+    }
+    return initials;
+};
+
+// Testing the function:
+console.log(getInitials("Adam Smith"));       // "A.S."
+console.log(getInitials("Clementina DuBuque")); // "C.D."
+
+// if (!fullName) return "";
+
+// let initials = "";
+// let isNewWord = true;
+
+// for (let i = 0; i < fullName.length; i++) {
+//     const char = fullName[i];
+//     // console.log(char);
+//     if (char === " ") {
+//         isNewWord = true;
+//     } else if (isNewWord && /[a-zA-Z]/.test(char)) {
+//         initials += char.toUpperCase();
+//         isNewWord = false;
+//     }
+// }
+
+// return initials.trim();
+// };
+
+
 // Step 1: Request data from the server and convert the raw JSON response
 
 const fetchData = async () => {
@@ -32,18 +70,18 @@ fetchData().then(users => {
 
         const nameDiv = document.createElement('div');
         nameDiv.className = 'names';
-        nameDiv.textContent = user.name;
-        console.log(nameDiv);
+        nameDiv.textContent = getInitials(user.name);
+        // console.log(nameDiv);
 
         const emailDiv = document.createElement('div');
         emailDiv.className = 'email';
         emailDiv.textContent = user.email;
-        console.log(emailDiv);
+        // console.log(emailDiv);
 
         const addressDiv = document.createElement('div');
         addressDiv.className = 'address';
         addressDiv.textContent = `${user.address.street}, ${user.address.city}, ${user.address.zipcode}`;
-        console.log(addressDiv);
+        // console.log(addressDiv);
 
         // Step 5: Assemble the inner card structure
 
