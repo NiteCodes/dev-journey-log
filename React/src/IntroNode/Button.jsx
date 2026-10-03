@@ -6,4 +6,4 @@ const Button = ({context,backgroundColor}) => {
   )
 }
 
-export default Button
+export default Button 

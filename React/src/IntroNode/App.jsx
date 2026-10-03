@@ -50,7 +50,8 @@ import React from 'react'
 import ChildComponent from './ChildComponent'
 // import './styles.css'
 import './styles.css'
-import Button from './Button.jsx'
+// import Button from './Button.jsx'
+import UseState from './UseState.jsx'
 
 
 
@@ -130,41 +131,55 @@ import Button from './Button.jsx'
 
 // ~task 2: button array ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// const App = () => {
+
+//     const btnArray = [
+//         {context:'login', 
+//             backgroundColor:'red'
+//         },
+//         {context:'logout', 
+//             backgroundColor:'yellow'
+//         },
+//         {context:'subscribe', 
+//             backgroundColor:'green'
+//         },
+//         {context:'delete', 
+//             backgroundColor:'blue'
+//         },
+//         {context:'comment', 
+//             backgroundColor:'orange'
+//         },
+//         {context:'edit', 
+//             backgroundColor:'pink'
+//         }
+//     ]
+
+
+//     return (
+//         <>
+//             {
+//                 btnArray.map(({ context,backgroundColor }) => (
+//                     <Button context ={context} backgroundColor = {backgroundColor} />
+//                 ))
+//             }
+
+//         </>
+//     )
+// }
+
+
+
+
 const App = () => {
-
-    const btnArray = [
-        {context:'login', 
-            backgroundColor:'red'
-        },
-        {context:'logout', 
-            backgroundColor:'yellow'
-        },
-        {context:'subscribe', 
-            backgroundColor:'green'
-        },
-        {context:'delete', 
-            backgroundColor:'blue'
-        },
-        {context:'comment', 
-            backgroundColor:'orange'
-        },
-        {context:'edit', 
-            backgroundColor:'pink'
-        }
-    ]
-
-
     return (
         <>
-            {
-                btnArray.map(({ context,backgroundColor }) => (
-                    <Button context ={context} backgroundColor = {backgroundColor} />
-                ))
-            }
-
+            <UseState />
         </>
-    )
+    )   
 }
+
+
+
 
 
 export default App
